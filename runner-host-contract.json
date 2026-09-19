@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "deixic.runner-host-container.v1",
+  "imageRepository": "ghcr.io/dx-corp/platform/runner-host",
+  "runAsUser": 65532,
+  "runAsGroup": 65532,
+  "api": {
+    "environment": "RUNNER_HOST_ADDR",
+    "port": 8080
+  },
+  "health": {
+    "environment": "RUNNER_HOST_HEALTH_ADDR",
+    "port": 8081,
+    "livenessPath": "/healthz",
+    "readinessPath": "/readyz"
+  },
+  "readOnlyRootFilesystem": true
+}

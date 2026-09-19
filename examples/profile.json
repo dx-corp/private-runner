@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "deixic.private-runner.v1",
+  "namespace": "deixic",
+  "name": "runner-host",
+  "image": "ghcr.io/dx-corp/platform/runner-host@sha256:1111111111111111111111111111111111111111111111111111111111111111",
+  "replicas": 2,
+  "serviceAccountName": "runner-host",
+  "existingConfigMap": "runner-host-config",
+  "existingSecret": "runner-host-secrets"
+}
