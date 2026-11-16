@@ -8,7 +8,7 @@ Choose a published Runner Host digest, verify its keyless signature, then copy
 the example profile and replace the illustrative digest and resource names:
 
 ```sh
-./verify-image.sh ghcr.io/dx-corp/platform/runner-host@sha256:<digest>
+./verify-image.sh "ghcr.io/dx-corp/platform/runner-host@sha256:<digest>"
 cp examples/profile.json runner.json
 node render.mjs --profile runner.json --output runner-manifest.json
 kubectl apply --dry-run=server -f runner-manifest.json
